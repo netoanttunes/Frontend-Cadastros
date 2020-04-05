@@ -33,6 +33,10 @@
     grid-gap: 24px;
     list-style: none;
 
+    @media  only screen and (max-width: 600px) {
+        grid-template-columns: 1fr;
+    }
+
 }
 
 .lista-container ul li {
@@ -42,14 +46,14 @@
     position: relative;
 }
 
-.lista-container ul li a {
+.lista-container ul li .buttonID {
     position: absolute;
     right: 24px;
     top: 24px;
     border: 0;
 }
 
-.lista-container ul li a:hover {
+.lista-container ul li .buttonID:hover {
     opacity: 0.6;
 }
 
