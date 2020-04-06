@@ -67,10 +67,9 @@ export default function Cadastro() {
                 <Link className="button" to="/lista">Lista de Entregas</Link>
             </header>
             <section className="form">
-                 
-            <form onSubmit={handlecadastro}>
-                <h1>Cadastro de Entregas</h1>
             
+            <form onSubmit={handlecadastro}>
+                <h1>Cadastro de Entregas</h1>     
                 <input 
                     placeholder="Nome do Cliente"
                     value={cliente}

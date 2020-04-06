@@ -45,7 +45,7 @@ export default function Lista(){
                         <strong>Endereço de destino:</strong>
                         <p>{entregas.rua_destino} {entregas.numero_destino} - {entregas.complemento_destino}, {entregas.bairro_destino}, {entregas.cidade_destino} - {entregas.uf_destino}</p>
                         
-                        <Link className="buttonID" to={`/mapa?origem=${entregas.rua_partida} ${entregas.numero_partida} ${entregas.cidade_partida} ${entregas.uf_partida}&destino=${entregas.rua_destino} ${entregas.numero_destino} ${entregas.cidade_destino} ${entregas.uf_destino}&travelMode=DRIVING&response=true`}>
+                        <Link className="buttonID" to={`/mapa?origem=${entregas.rua_partida} ${entregas.numero_partida} ${entregas.bairro_partida} ${entregas.cidade_partida} ${entregas.uf_partida}&destino=${entregas.rua_destino} ${entregas.numero_destino} ${entregas.cidade_destino} ${entregas.bairro_destino} ${entregas.uf_destino}&mode=DRIVING&resposta=true`}>
                         <FiMapPin size={30} color="0808b3" />
                         </Link>
                                                     

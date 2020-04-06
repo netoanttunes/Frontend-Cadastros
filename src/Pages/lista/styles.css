@@ -1,24 +1,27 @@
 .lista-container {
     width: 100%;
     max-width: 1180px;
-    padding: 0 30px;
+    padding: 0 30px 0 30px;
     margin: 32px auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .lista-container header{
+   
     display: flex;
     align-items: center;
+    
 }
-
 
 .lista-container header img{
-    height: 90px;
+    height: 120px;
+   
 }
-
-.lista-container header a {
-    width: 260px;
-    margin-top: 0;
-    margin-left: auto;
+.lista-container header .button{
+    position: absolute;
+    right: 70px;
+    top: 65px;
 }
 
 
@@ -29,14 +32,9 @@
 }
 .lista-container ul {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     grid-gap: 24px;
     list-style: none;
-
-    @media  only screen and (max-width: 600px) {
-        grid-template-columns: 1fr;
-    }
-
 }
 
 .lista-container ul li {
@@ -72,4 +70,26 @@
     color: #737380;
     line-height: 21px;
     font-size: 16px;
+}
+
+@media (max-width: 920px){
+    .lista-container header{
+        flex-direction: column;
+    }
+
+    .lista-container header img{
+        height: 75px;
+        margin-right: 0px;
+        margin-bottom: 20px;
+        
+    }
+
+    .lista-container h1{
+        font-size: 18px;
+    }
+    .lista-container header .button{
+        position: static;
+        right: 0px;
+        top: 0px;
+    }
 }

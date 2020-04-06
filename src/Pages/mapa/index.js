@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { GoogleMap, LoadScript, DirectionsService, DirectionsRenderer } from '@react-google-maps/api';
+import { GoogleMap, LoadScript, DirectionsService, DirectionsRenderer, InfoBox } from '@react-google-maps/api';
 import queryString from 'query-string'
 import { Link } from 'react-router-dom';
 
@@ -25,8 +25,6 @@ import './styles.css';
     componentDidMount() {
       const values = queryString.parse(this.props.location.search)
       this.setState({
-        response: true,
-        travelMode: 'DRIVING',
         origin: `${values.origem} `,
         destination: `${values.destino}`
       })
@@ -57,16 +55,15 @@ import './styles.css';
           <div className='map-container'>
             <LoadScript
              id="script-loader"
-              googleMapsApiKey="AIzaSyBYDd3Mhv6phRYGV0Y9rR017AJ-P3ovBC8"
-          
+              googleMapsApiKey= "AIzaSyBYDd3Mhv6phRYGV0Y9rR017AJ-P3ovBC8"         
              >
             <GoogleMap
               id='direction-example'
               mapContainerStyle={{
-                height: '500px',
+                height: '100vh',
                 width: '100%'
               }}
-              zoom={2}
+              zoom={3}
               center={{
                 lat: -22.9552549,
                 lng: -43.1669116

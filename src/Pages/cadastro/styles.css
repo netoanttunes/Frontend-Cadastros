@@ -1,6 +1,5 @@
 .Cadastro-container {
     width: 100%;
-    max-width: 1180px;
     padding: 0 30px;
     margin: 32px auto;
     display: flex;
@@ -9,6 +8,8 @@
        
 }
 .Cadastro-container header{
+    width: 100%;
+    max-width: 900px;
     display: flex;
     align-items: center;
     
@@ -20,11 +21,6 @@
     margin-right: 100px;
 }
 
-.Cadastro-container header a {
-    width: 260px;
-    margin-top: 0;
-    margin-left: auto;
-}
 
 .Cadastro-container section.form {
   max-width: 500px;
@@ -52,4 +48,30 @@
 .Cadastro-container section.form .input-group input +input {
     margin-left: 8px;
     max-width: 70px;
+}
+.Cadastro-container section.form form button {
+    width: 100%;
+}
+@media (max-width: 800px){
+    .Cadastro-container header{
+        flex-direction: column;
+    }
+
+    .Cadastro-container header img{
+        height: 75px;
+        margin-right: 0px;
+        margin-bottom: 20px;
+        
+    }
+
+    .Cadastro-container header .button{
+        position: static;
+        right: 0px;
+        top: 0px;
+    }
+
+    .Cadastro-container section.form form h1{
+        font-size: 22px;
+    }
+  
 }
