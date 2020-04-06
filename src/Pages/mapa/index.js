@@ -60,7 +60,7 @@ import './styles.css';
             <GoogleMap
               id='direction-example'
               mapContainerStyle={{
-                height: '100vh',
+                height: '70vh',
                 width: '100%'
               }}
               zoom={3}
